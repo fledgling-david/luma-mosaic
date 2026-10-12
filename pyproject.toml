@@ -1,0 +1,16 @@
+[project]
+name = "luma-mosaic-tools"
+version = "1.0.0"
+description = "Deterministic helpers for the LumaMosaic wallpaper skill"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "fledgling-david" }]
+dependencies = ["Pillow>=10.2,<13"]
+
+[project.urls]
+Repository = "https://github.com/fledgling-david/luma-mosaic"
+
+[tool.ruff]
+line-length = 96
+target-version = "py310"
