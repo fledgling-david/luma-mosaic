@@ -26,4 +26,5 @@ jobs:
           python scripts/plan_wallpapers.py --help
           python scripts/validate_images.py --help
       - name: Check skill entrypoint
-        run: python -c "from pathlib import Path; t=Path('SKILL.md').read_text(encoding='utf-8'); assert t.startswith('---'); assert 'name: luma-mosaic' in t; assert '[TODO' not in t"
+        run: |
+          python -c "from pathlib import Path; t=Path('SKILL.md').read_text(encoding='utf-8'); assert t.startswith('---'); assert 'name: luma-mosaic' in t; assert '[TODO' not in t"
