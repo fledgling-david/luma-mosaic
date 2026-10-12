@@ -1,0 +1,16 @@
+{
+  "subject": "the same tabby cat shown across all source photos",
+  "identity_anchors": [
+    "green almond-shaped eyes",
+    "white chin and chest",
+    "dark M-shaped forehead marking"
+  ],
+  "source_mood": "quiet, warm, and domestic",
+  "ratio": "16:9",
+  "desktop_safe_side": "left",
+  "deliverables": [
+    "01-source-match.png",
+    "02-intelligent-extension.png",
+    "03-bold-reimagination.png"
+  ]
+}
