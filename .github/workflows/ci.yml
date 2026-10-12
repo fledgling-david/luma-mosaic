@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Check command-line helpers
+        run: |
+          python scripts/analyze_palette.py --help
+          python scripts/plan_wallpapers.py --help
+          python scripts/validate_images.py --help
+      - name: Check skill entrypoint
+        run: python -c "from pathlib import Path; t=Path('SKILL.md').read_text(encoding='utf-8'); assert t.startswith('---'); assert 'name: luma-mosaic' in t; assert '[TODO' not in t"
