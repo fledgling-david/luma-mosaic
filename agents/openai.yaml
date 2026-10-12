@@ -1,0 +1,4 @@
+interface:
+  display_name: "LumaMosaic · 光影织境"
+  short_description: "Weave source photos into three wallpaper directions"
+  default_prompt: "Use $luma-mosaic to turn my photos into three distinct finished wallpapers."
